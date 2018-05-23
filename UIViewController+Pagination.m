@@ -101,6 +101,10 @@ static char scollViewKey;
     self.scollView = scollView;
 }
 
+- (void)removePullDownToRefreshWithScollView:(UIScrollView*)scollView {
+    scollView.mj_header = nil;
+}
+
 - (void)addPullUpToLoadMoreWithScollView:(UIScrollView*)scollView
                        refreshingHandler:(EDHRefreshingHandler)refreshingHandler
 {
@@ -120,6 +124,10 @@ static char scollViewKey;
 
     scollView.mj_footer = footer;
     self.scollView = scollView;
+}
+
+- (void)removePullUpToLoadMoreWithScollView:(UIScrollView*)scollView {
+    scollView.mj_footer = nil;
 }
 
 - (void)endRefreshingWithWithSucceed:(BOOL)succeed noMoreData:(BOOL)noMoreData

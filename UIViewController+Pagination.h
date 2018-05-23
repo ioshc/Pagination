@@ -24,6 +24,14 @@ typedef void (^EDHRefreshingHandler)(NSInteger currentPage);
 - (void)addPullDownToRefreshWithScollView:(UIScrollView*)scollView
                         refreshingHandler:(EDHRefreshingHandler)refreshingHandler;
 
+
+/**
+ Remove pull down to refresh from specified scollView
+
+ @param scollView     The scollView who want to remove pull down to refresh
+ */
+- (void)removePullDownToRefreshWithScollView:(UIScrollView*)scollView;
+
 /**
  * Add pull up to load more for specified scollView
  * @param scollView     The scollView who want to add pull up to load more
@@ -31,6 +39,14 @@ typedef void (^EDHRefreshingHandler)(NSInteger currentPage);
  */
 - (void)addPullUpToLoadMoreWithScollView:(UIScrollView*)scollView
                        refreshingHandler:(EDHRefreshingHandler)refreshingHandler;
+
+
+/**
+ Remove pull up to load more from specified scollView
+
+ @param scollView     The scollView who want to remove pull up to load more
+ */
+- (void)removePullUpToLoadMoreWithScollView:(UIScrollView*)scollView;
 
 /**
  * When the data is loaded,manually call this function to end refreshing
